@@ -1,0 +1,26 @@
+<html>
+
+<head>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<script>
+function onSignIn(googleUser) {
+  var id_token = googleUser.getAuthResponse().id_token;
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'http://localhost:3000/login');
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.onload = function() {
+    console.log('Signed in as: ' + xhr.responseText);
+  };
+  xhr.send('idtoken=' + id_token);
+}
+</script>
+<meta name="google-signin-client_id" content="584319657310-q4rpinvp1b41shkj889u5q3sf5uiccv7.apps.googleusercontent.com">
+</head>
+<body>
+<p>hello world</p>
+<p>ClientID:  584319657310-q4rpinvp1b41shkj889u5q3sf5uiccv7.apps.googleusercontent.com </p>
+<p>Client Secret:  FCzfSfn6ifEf5zN4UiRl0-MC </p>
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+</body>
+</html>
