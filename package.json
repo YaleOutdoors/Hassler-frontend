@@ -1,0 +1,33 @@
+{
+  "name": "hassler_frontend",
+  "version": "1.0.0",
+  "description": "The frontend for the 2015 Yale Outdoors website makeover",
+  "main": "index.js",
+  "dependencies": {
+    "browserify": "^11.0.1",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3"
+  },
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "react-tools": "^0.13.3",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YaleOutdoors/Hassler-frontend.git"
+  },
+  "author": "Sylvan Zheng and Marcus Russi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YaleOutdoors/Hassler-frontend/issues"
+  },
+  "homepage": "https://github.com/YaleOutdoors/Hassler-frontend"
+}
