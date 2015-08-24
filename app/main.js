@@ -2,6 +2,10 @@ var React = require('react');
 var Router = require('react-router');
 var Route = Router.Route;
 
+var Menu = require('./menu.js');
+var List = require('./list.js');
+var Content = require('./content.js');
+
 // declare our routes and their hierarchy
 // var routes = (
 //   <Route handler={App}>
@@ -21,9 +25,21 @@ var Route = Router.Route;
 // });
 
 // React.render(<App/>, document.body);
-
+console.log('lol');
+var Main = React.createClass({
+    render: function () {
+        return (
+            <div id="layout" class="content pure-g">
+                <Menu/>
+                <List/>
+                <Content/>
+            </div>
+        );
+    }
+})
 
 React.render(
-  React.createElement('h1', null, 'Hello, world!'),
-  document.getElementById('react')
+  <Main/>,
+  document.getElementById('app')
 );
+//hmm

@@ -1,5 +1,32 @@
+var React = require('react');
+
+var menuItems = [
+    "About",
+    "Blog",
+    "Trips",
+    "Leaders",
+    "Projects",
+    "Resources"
+];
+
+var MenuItem = React.createClass({
+    render: function() {
+        return (
+            <li class="pure-menu-item">
+                <a href="#" class="pure-menu-link">
+                    {this.props.name}
+                </a>
+            </li>
+        )
+    }
+})
+
 var Menu = React.createClass({
     render: function() {
+        var itemNodes = menuItems.map(function (item) {
+            return <MenuItem name={item} />;
+        });
+
         return (
             <div id="nav" class="pure-u">
                 <a href="#" class="nav-menu-button">Menu</a>
@@ -10,15 +37,7 @@ var Menu = React.createClass({
 
                     <div class="pure-menu">
                         <ul class="pure-menu-list">
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Inbox <span class="email-count">(2)</span></a></li>
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Important</a></li>
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sent</a></li>
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Drafts</a></li>
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Trash</a></li>
-                            <li class="pure-menu-heading">Labels</li>
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link"><span class="email-label-personal"></span>Personal</a></li>
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link"><span class="email-label-work"></span>Work</a></li>
-                            <li class="pure-menu-item"><a href="#" class="pure-menu-link"><span class="email-label-travel"></span>Travel</a></li>
+                            {itemNodes}
                         </ul>
                     </div>
                 </div>
@@ -26,3 +45,5 @@ var Menu = React.createClass({
         );
     }
 })
+
+module.exports = Menu;
