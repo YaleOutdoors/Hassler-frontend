@@ -106,7 +106,7 @@ a {
  * -- EMAIL STYLES --
  * Styles relevant to the email messages, labels, counts, and more.
  */
-/*.email-count {
+.email-count {
     color: rgb(75, 113, 151);
 }
 
@@ -127,11 +127,11 @@ a {
 }
 .email-label-travel {
     background: #40c365;
-}*/
+}
 
 
 /* Email Item Styles */
-/*.email-item {
+.email-item {
     padding: 0.9em 1em;
     border-bottom: 1px solid #ddd;
     border-left: 6px solid transparent;
@@ -158,10 +158,10 @@ a {
 }
 .email-item-unread {
     border-left: 6px solid #1b98f8;
-}*/
+}
 
 /* Email Content Styles */
-/*.email-content-header, .email-content-body, .email-content-footer {
+.email-content-header, .email-content-body, .email-content-footer {
     padding: 1em 2em;
 }
     .email-content-header {
@@ -190,7 +190,7 @@ a {
     .email-avatar {
         width: 40px;
         height: 40px;
-    }*/
+    }
 
 
 /*

@@ -2,16 +2,17 @@ var React = require('react');
 
 var ListItem = React.createClass({
     render: function() {
+        console.log(this.props);
         return (
-            <div class="email-item email-item-unread pure-g">
-                <div class="pure-u">
-                    <img class="email-avatar" alt="Eric Ferraiuolo&#x27;s avatar" height="64" width="64" src="img/common/ericf-avatar.png"></img>
+            <div className="email-item email-item-unread pure-g">
+                <div className="pure-u">
+                    <img className="email-avatar" height="64" width="64" src={this.props.img}></img>
                 </div>
 
-                <div class="pure-u-3-4">
-                    <h5 class="email-name">{this.props.subhead}</h5>
-                    <h4 class="email-subject">{this.props.head}</h4>
-                    <p class="email-desc">
+                <div className="pure-u-3-4">
+                    <h5 className="email-name">{this.props.subhead}</h5>
+                    <h4 className="email-subject">{this.props.head}</h4>
+                    <p className="email-desc">
                         {this.props.children}
                     </p>
                 </div>
@@ -24,14 +25,14 @@ var List = React.createClass({
     render: function () {
         var listNodes = this.props.items.map(function(item) {
             return (
-                <ListItem head={item.head} subhead={item.subhead}>
+                <ListItem head={item.head} subhead={item.subhead} img={item.img}>
                     {item.text}
                 </ListItem>
             );
         });
 
         return (
-            <div id="list" class="pure-u-1">
+            <div id="list" className="pure-u-1">
                 {listNodes}
             </div>
         );
