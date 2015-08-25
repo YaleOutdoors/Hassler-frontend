@@ -41,8 +41,7 @@ gulp.task('css', function () {
 gulp.task('watch', function() {
   gulp.watch('css/**/*.css', ['css']);
   gulp.watch('app/**/*.js', ['scripts']);
-})
+});
 
-// Just running the two tasks
 gulp.task('default', ['scripts', 'css', 'watch']);
 

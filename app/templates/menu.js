@@ -1,14 +1,5 @@
 var React = require('react');
 
-var menuItems = [
-    "About",
-    "Blog",
-    "Trips",
-    "Leaders",
-    "Projects",
-    "Resources"
-];
-
 var MenuItem = React.createClass({
     render: function() {
         return (
@@ -19,11 +10,11 @@ var MenuItem = React.createClass({
             </li>
         )
     }
-})
+});
 
 var Menu = React.createClass({
     render: function() {
-        var itemNodes = menuItems.map(function (item) {
+        var itemNodes = this.props.items.map(function (item) {
             return <MenuItem name={item} />;
         });
 

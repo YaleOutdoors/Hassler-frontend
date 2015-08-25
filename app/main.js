@@ -6,12 +6,14 @@ var Menu = require('./templates/menu.js');
 var List = require('./templates/list.js');
 var Content = require('./templates/content.js');
 
-var Main = React.createClass({
+var Fixtures = require('./fixtures.js');
+
+var App = React.createClass({
     render: function () {
         return (
             <div id="layout" class="content pure-g">
-                <Menu/>
-                <List/>
+                <Menu items={Fixtures.menuItems} />
+                <List items={Fixtures.listItems} />
                 <Content/>
             </div>
         );
@@ -19,6 +21,6 @@ var Main = React.createClass({
 })
 
 React.render(
-  <Main/>,
-  document.getElementById('app')
+  <App/>,
+  document.body
 );
