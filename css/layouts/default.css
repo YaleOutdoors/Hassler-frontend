@@ -46,6 +46,26 @@ a {
     padding: 0;
 }
 
+#full {
+    margin-left: -350px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+#iframe {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    border: none;
+}
+
 /* Make the navigation 100% width on phones */
 #nav {
     width: 100%;
@@ -87,6 +107,10 @@ a {
     border: none;
     text-align: left;
 }
+    #nav .pure-menu-link {
+        color: black;
+        background-color: #94A3B8;
+    }
     #nav .pure-menu-link:hover,
     #nav .pure-menu-link:focus {
         background: rgb(55, 60, 90);

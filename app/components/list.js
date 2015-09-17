@@ -2,7 +2,6 @@ var React = require('react');
 
 var ListItem = React.createClass({
     render: function() {
-        console.log(this.props);
         return (
             <div className="email-item email-item-unread pure-g">
                 <div className="pure-u">

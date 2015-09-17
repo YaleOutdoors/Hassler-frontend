@@ -1,12 +1,3 @@
-var menuItems = [
-    "About",
-    "Blog",
-    "Trips",
-    "Leaders",
-    "Projects",
-    "Resources"
-];
-
 var trips = [
     {
         type: "climbing",
@@ -18,10 +9,10 @@ var trips = [
         type: "hiking/camping",
         name: "Adirondacks: Panther Gorge Overnight",
         shortText: "3-day, 26mi backpacking trip through the High Peaks region of the Adirondacks",
+        pics: ['panther_gorge.png']
     }
 ];
 
 module.exports = {
-    menuItems: menuItems,
     trips: trips
 };
